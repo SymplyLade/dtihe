@@ -1,0 +1,49 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="720" rx="48" fill="#07110F"/>
+  <path d="M0 0h960v720H0z" fill="url(#bg)"/>
+  <g opacity=".22" stroke="#fff">
+    <path d="M0 120h960M0 240h960M0 360h960M0 480h960M0 600h960"/>
+    <path d="M120 0v720M240 0v720M360 0v720M480 0v720M600 0v720M720 0v720M840 0v720"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M480 132 690 210v142c0 132-84 203-210 259-126-56-210-127-210-259V210l210-78Z" fill="#B7FF2A" fill-opacity=".12" stroke="#B7FF2A" stroke-width="5"/>
+    <path d="M480 205 622 258v96c0 89-57 137-142 175-85-38-142-86-142-175v-96l142-53Z" fill="#30D5C8" fill-opacity=".09" stroke="#30D5C8" stroke-width="3"/>
+    <circle cx="480" cy="360" r="76" fill="#B7FF2A"/>
+    <path d="M480 301v118" stroke="#07110F" stroke-width="18" stroke-linecap="round"/>
+    <path d="M421 360h118" stroke="#07110F" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <g stroke="#30D5C8" stroke-width="3" opacity=".72">
+    <path d="M217 190h128l58 58M743 190H615l-58 58M217 530h128l58-58M743 530H615l-58-58"/>
+    <circle cx="217" cy="190" r="12" fill="#30D5C8"/>
+    <circle cx="743" cy="190" r="12" fill="#30D5C8"/>
+    <circle cx="217" cy="530" r="12" fill="#30D5C8"/>
+    <circle cx="743" cy="530" r="12" fill="#30D5C8"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-weight="800" letter-spacing="6" fill="#fff">
+    <text x="72" y="88" font-size="24" opacity=".72">SOVEREIGN SHIELD</text>
+    <text x="668" y="650" font-size="18" opacity=".44">SECURE CORE</text>
+  </g>
+  <g fill="#B7FF2A">
+    <rect x="72" y="612" width="178" height="12" rx="6" opacity=".8"/>
+    <rect x="72" y="638" width="108" height="12" rx="6" opacity=".38"/>
+    <rect x="710" y="72" width="178" height="12" rx="6" opacity=".8"/>
+    <rect x="780" y="98" width="108" height="12" rx="6" opacity=".38"/>
+  </g>
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(480 360) rotate(90) scale(420 560)">
+      <stop stop-color="#12362F"/>
+      <stop offset=".58" stop-color="#07110F"/>
+      <stop offset="1" stop-color="#06100E"/>
+    </radialGradient>
+    <filter id="glow" x="214" y="76" width="532" height="591" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="8"/>
+      <feGaussianBlur stdDeviation="26"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.717647 0 0 0 0 1 0 0 0 0 0.164706 0 0 0 0.35 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+</svg>
