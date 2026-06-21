@@ -8,18 +8,23 @@ export default function Timeline() {
 
   return (
     <section id="timeline" className="figma-section border-b border-white/10">
-      <div className="blueprint-frame blueprint-dots mx-auto max-w-7xl px-5 py-10 sm:px-10">
-        <h2 className="text-center text-4xl font-black uppercase leading-none text-zinc-100 sm:text-5xl">Programme Phases</h2>
+      <div className="blueprint-frame blueprint-dots mx-auto max-w-7xl px-5 py-5 sm:px-10">
+        <h2 className="text-center text-[30px] font-black uppercase leading-none text-zinc-100 sm:text-[42px]">Programme Phases</h2>
 
-        <div className="relative mx-auto mt-14 max-w-4xl">
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-white/15 sm:block"></div>
-          <div className="space-y-12">
+        <div className="relative mx-auto mt-12 max-w-5xl">
+          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-white/15 md:block"></div>
+          <div className="space-y-14 md:space-y-20">
             {phases.map((phase) => (
-              <div key={phase.title} className="grid items-center gap-6 sm:grid-cols-[1fr_72px_1fr]">
-                <div className={phase.side === 'left' ? 'text-right' : 'hidden sm:block'}>{phase.side === 'left' && <PhaseCopy phase={phase} />}</div>
-                <div className="relative z-10 mx-auto grid h-12 w-12 place-items-center rounded-full bg-[#96ff00] font-black text-black">{phase.marker}</div>
-                <div>{phase.side === 'right' ? <PhaseCopy phase={phase} /> : <DayLabel day={phase.day} />}</div>
-                {phase.side === 'right' && <div className="sm:hidden"><DayLabel day={phase.day} /></div>}
+              <div key={phase.title} className="grid items-start gap-5 md:grid-cols-[1fr_76px_1fr]">
+                <div className={phase.side === 'left' ? 'md:text-right' : 'hidden pt-7 md:flex md:justify-end'}>
+                  {phase.side === 'left' ? <PhaseCopy phase={phase} align="left" /> : <DayLabel day={phase.day} />}
+                </div>
+                <div className="relative z-10 mx-auto grid h-10 w-10 place-items-center rounded-full bg-[#96ff00] font-mono text-[12px] font-black text-black">
+                  {phase.marker}
+                </div>
+                <div className={phase.side === 'right' ? '' : 'hidden pt-7 md:block'}>
+                  {phase.side === 'right' ? <PhaseCopy phase={phase} /> : <DayLabel day={phase.day} />}
+                </div>
               </div>
             ))}
           </div>
@@ -29,12 +34,14 @@ export default function Timeline() {
   );
 }
 
-function PhaseCopy({ phase }) {
+function PhaseCopy({ phase, align }) {
   return (
     <div>
-      <h3 className="text-xl font-black uppercase text-[#96ff00]">{phase.title}</h3>
-      <p className="mt-2 font-mono text-[11px] uppercase leading-5 tracking-[0.08em] text-white/70">{phase.desc}</p>
-      <div className="mt-5"><DayLabel day={phase.day} /></div>
+      <h3 className="text-[18px] font-black uppercase leading-none text-[#96ff00]">{phase.title}</h3>
+      <p className={`mt-3 max-w-[360px] font-mono text-[10px] uppercase leading-5 tracking-[0.03em] text-white/70 ${align === 'left' ? 'md:ml-auto' : ''}`}>
+        {phase.desc}
+      </p>
+      <div className="mt-4 md:hidden"><DayLabel day={phase.day} /></div>
     </div>
   );
 }

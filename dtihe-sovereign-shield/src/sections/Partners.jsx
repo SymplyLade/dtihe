@@ -8,9 +8,22 @@ export default function Partners() {
         <p className="micro-label mt-2">Promoting defence innovation</p>
         <div className="mt-14 grid grid-cols-2 items-center gap-10 sm:grid-cols-5">
           {partners.map((partner, index) => (
-            <div key={`${partner}-${index}`} className="text-center text-white">
-              <div className="text-3xl font-black tracking-[-0.08em]">{partner}</div>
-              {partner === 'ONDI' && <p className="mt-1 text-[10px] font-black uppercase leading-3">Office for<br />Nigerian Digital<br />Innovation</p>}
+            <div key={`${partner}-${index}`} className="flex h-14 items-center justify-center text-center text-white">
+              {partner === 'ONDI' ? (
+                <img
+                  src="/assets/ondi-logo.jpg"
+                  alt="Office for Nigerian Digital Innovation"
+                  className="h-12 w-auto object-contain"
+                />
+              ) : partner === 'DEFCOMM' ? (
+                <img
+                  src="/assets/defcomm-logo.jpg"
+                  alt="DEFCOMM"
+                  className="h-7 w-auto object-contain"
+                />
+              ) : (
+                <div className="text-2xl font-black uppercase tracking-[-0.08em]">{partner}</div>
+              )}
             </div>
           ))}
         </div>

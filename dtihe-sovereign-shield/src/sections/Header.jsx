@@ -14,8 +14,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-black px-5 py-5 font-mono lg:px-10">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6">
-        <a href="#" className="text-2xl font-black tracking-[-0.05em] text-white" aria-label="DTIHE home">
-          DTIHE<span className="ml-1 text-[#96ff00]">_</span>
+        <a href="#" className="block shrink-0" aria-label="DTIHE home">
+          <img src="/assets/dtihe-logo.png" alt="DTIHE" className="h-6 w-auto sm:h-7" />
         </a>
 
         <nav className="hidden items-center gap-9 text-[10px] uppercase tracking-wider text-white/70 lg:flex">
