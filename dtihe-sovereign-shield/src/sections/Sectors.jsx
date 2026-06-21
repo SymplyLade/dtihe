@@ -57,21 +57,21 @@ export default function Sectors() {
     <section id="sectors" className="figma-section pb-12">
       <div className="blueprint-frame mx-auto max-w-6xl">
         <div className="grid border-b border-white/10 lg:grid-cols-[1fr_1fr]">
-          <div className="p-8">
-            <h2 className="text-3xl font-black uppercase leading-none text-zinc-100 sm:text-4xl">Operational Sectors</h2>
+          <div className="p-5 sm:p-8">
+            <h2 className="text-2xl font-black uppercase leading-none text-zinc-100 sm:text-4xl">Operational Sectors</h2>
             <p className="micro-label mt-2">Primary innovation focus areas</p>
           </div>
-          <div className="p-8 text-right font-mono text-[10px] uppercase tracking-[0.12em] text-white/70">
+          <div className="p-5 font-mono text-[10px] uppercase tracking-[0.08em] text-white/70 sm:p-8 sm:text-right sm:tracking-[0.12em]">
             <p>Grid_coordinates: 09.0765 N, 07.3986 E</p>
             <p>Status: System_Active</p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5">
           {sectorsData.map((sector, index) => (
             <article
               key={sector.title}
-              className={`min-h-[175px] border-r border-white/15 p-6 ${
+              className={`min-h-[155px] border-b border-white/15 p-5 sm:min-h-[175px] sm:border-r sm:p-6 lg:border-b-0 ${
                 index === 0 ? 'bg-[#111b08] shadow-[inset_0_-3px_0_#96ff00]' : 'bg-black'
               }`}
             >

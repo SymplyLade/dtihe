@@ -12,8 +12,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black px-5 py-5 font-mono lg:px-10">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black px-4 py-4 font-mono sm:px-5 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 sm:gap-6">
         <a href="#" className="block shrink-0" aria-label="DTIHE home">
           <img src="/assets/dtihe-logo.png" alt="DTIHE" className="h-6 w-auto sm:h-7" />
         </a>
@@ -30,7 +30,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <Button href="#contact" className="px-5 py-3">
+        <Button href="#contact" className="hidden px-5 py-3 sm:inline-flex">
           Enlist Now
         </Button>
       </div>

@@ -17,23 +17,23 @@ export default function Contact() {
   const labelClass = 'font-mono text-[11px] uppercase tracking-[0.08em] text-white/60';
 
   return (
-    <section id="contact" className="bg-[#111312] px-4 py-20 sm:px-8 lg:px-12">
-      <div className="blueprint-frame blueprint-dots mx-auto grid max-w-7xl gap-10 p-8 lg:grid-cols-[1fr_1fr] lg:p-12">
+    <section id="contact" className="bg-[#111312] px-4 py-16 sm:px-8 sm:py-20 lg:px-12">
+      <div className="blueprint-frame blueprint-dots mx-auto grid max-w-7xl gap-8 p-5 sm:p-8 lg:grid-cols-[1fr_1fr] lg:gap-10 lg:p-12">
         <div>
-          <h2 className="max-w-lg text-4xl font-black uppercase leading-none text-white sm:text-5xl">
+          <h2 className="max-w-lg text-3xl font-black uppercase leading-none text-white sm:text-5xl">
             Secure Programme <span className="block text-[#96ff00]">Partnership</span>
           </h2>
-          <ul className="mt-10 space-y-6 text-xl font-black text-white">
+          <ul className="mt-8 space-y-5 text-base font-black text-white sm:mt-10 sm:space-y-6 sm:text-xl">
             {['Formalize Strategic Partnership', 'Secure Programme Implementation Support', 'Co-create Challenge Areas'].map((item) => (
-              <li key={item} className="flex items-center gap-4">
-                <span className="font-mono text-[#96ff00]">→</span>
-                {item}
+              <li key={item} className="flex items-start gap-4">
+                <span className="font-mono text-[#96ff00]">-&gt;</span>
+                <span>{item}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <form onSubmit={handleSubmit} className="border border-[#96ff00]/45 bg-[#1b1d1b] p-8">
+        <form onSubmit={handleSubmit} className="border border-[#96ff00]/45 bg-[#1b1d1b] p-5 sm:p-8">
           <p className="border-b border-white/10 pb-4 font-mono text-[11px] font-black uppercase tracking-[0.12em] text-white">Initiate_Contact_Sequence</p>
 
           <div className="mt-7 space-y-5">

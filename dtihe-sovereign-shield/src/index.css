@@ -36,10 +36,10 @@
   }
 
   .figma-section {
-    @apply bg-black px-4 py-20 sm:px-8 lg:px-12;
+    @apply bg-black px-4 py-16 sm:px-8 sm:py-20 lg:px-12;
   }
 
   .micro-label {
-    @apply text-[10px] font-semibold uppercase tracking-[0.28em] text-[#96ff00];
+    @apply text-[10px] font-semibold uppercase tracking-[0.18em] text-[#96ff00] sm:tracking-[0.28em];
   }
 }

@@ -1,5 +1,5 @@
 export default function Button({ children, variant = 'primary', onClick, href, className = '', type = 'button' }) {
-  const baseStyles = 'inline-flex items-center justify-center gap-2 border px-7 py-3 font-mono text-[10px] font-black uppercase tracking-[0.24em] transition-all duration-200 select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#96ff00]';
+  const baseStyles = 'inline-flex max-w-full items-center justify-center gap-2 border px-6 py-3 text-center font-mono text-[10px] font-black uppercase tracking-[0.18em] transition-all duration-200 select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[#96ff00] sm:px-7 sm:tracking-[0.24em]';
 
   const variants = {
     primary: 'border-[#96ff00] bg-[#96ff00] text-black hover:bg-[#c7ff4c]',
