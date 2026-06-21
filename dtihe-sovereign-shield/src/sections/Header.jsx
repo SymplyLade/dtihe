@@ -19,7 +19,7 @@ export default function Header() {
           <img src="/assets/dtihe-logo.png" alt="DTIHE" className="h-6 w-auto sm:h-7" />
         </a>
 
-        <Button href="#contact" className="hidden min-w-[138px] px-7 py-4 sm:inline-flex lg:min-w-[184px] lg:py-5">
+        <Button href="#contact" className="min-w-[116px] px-4 py-3 text-[9px] tracking-[0.14em] sm:min-w-[138px] sm:px-7 sm:py-4 sm:text-[10px] sm:tracking-[0.24em] lg:min-w-[184px] lg:py-5">
           Enlist Now
         </Button>
         </div>
