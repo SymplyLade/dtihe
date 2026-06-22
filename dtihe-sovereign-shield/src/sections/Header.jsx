@@ -34,7 +34,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center justify-end gap-3">
-            <Button href="#contact" className="hidden min-w-[116px] px-5 py-3 text-[10px] tracking-[0.08em] sm:inline-flex lg:min-w-[148px] lg:px-7">
+            <Button href="#contact" className="min-w-[96px] px-3 py-3 text-[9px] tracking-[0.08em] sm:min-w-[116px] sm:px-5 sm:text-[10px] lg:min-w-[148px] lg:px-7">
               Enlist Now
             </Button>
 
