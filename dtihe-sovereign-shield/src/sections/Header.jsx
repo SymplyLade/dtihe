@@ -14,23 +14,27 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black px-4 py-4 font-mono sm:px-5 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4 lg:gap-8">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black px-4 py-4 font-mono sm:px-5 lg:px-9 lg:py-5">
+      <div className="mx-auto max-w-[1360px]">
+        <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4 lg:gap-10">
           <a href="#" className="block shrink-0" aria-label="DTIHE home">
-            <img src="/assets/dtihe-logo.png" alt="DTIHE" className="h-6 w-auto sm:h-7" />
+            <img src="/assets/dtihe-logo.png" alt="DTIHE" className="h-6 w-auto sm:h-7 lg:h-8" />
           </a>
 
-          <nav className="hidden justify-center gap-6 text-[10px] uppercase tracking-wider text-white/70 md:flex lg:gap-9">
+          <nav className="hidden justify-center gap-6 text-[10px] uppercase tracking-wider text-white/70 md:flex lg:gap-10">
             {navLinks.map((link) => (
-              <a key={link.label} href={link.href} className="shrink-0 hover:text-[#96ff00]">
+              <a
+                key={link.label}
+                href={link.href}
+                className={`relative shrink-0 py-2 hover:text-[#96ff00] ${link.label === 'Mission' ? 'text-[#96ff00] after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-[#96ff00]' : ''}`}
+              >
                 {link.label}
               </a>
             ))}
           </nav>
 
           <div className="flex items-center justify-end gap-3">
-            <Button href="#contact" className="hidden min-w-[138px] px-7 py-4 text-[10px] tracking-[0.24em] sm:inline-flex lg:min-w-[184px] lg:py-5">
+            <Button href="#contact" className="hidden min-w-[116px] px-5 py-3 text-[10px] tracking-[0.08em] sm:inline-flex lg:min-w-[148px] lg:px-7">
               Enlist Now
             </Button>
 
